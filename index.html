@@ -7,47 +7,59 @@
   <meta name="description" content="Webdeveloper portfolio">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<link rel="stylesheet" href="minified/style.css">
+<link rel="stylesheet" href="style.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="scripts/script.js"></script>
+<script src="node_modules/svg-injector/svg-injector.js"></script>
 </head>
 <body>
+
 <div id="image-intro">
 <nav id="navigation">
 <ul>
 <li>Home</li>
-<li><a href="samples.html">Works</a></li>
 <li>Contact</li>
 </ul>
 </nav>
  <h1>Hello! I'm Lukas, a Back-end WebDeveloper currently residing in HIDDEN.</h1>
-  <a href="samples.html" id="button-main">View my works</a>
+  <a href="#skills" id="button-main">View my works</a>
 </div>
+
+
 <div id="skills">
-	<h1>Skills</h1>
-	<hr style="width:50%;border-color:#D4D4D4;">
-	<div class="row">
-		<div class="col-md-4">
-		<ul class="front-end">
-		<li>Usage of bootstrap</li>
-		<li>Javascript & JQuery</li>
-		<li>AJAX</li>
-		<li>SASS-a CSS extension</li>
-		</ul>
+	<h1> Samples </h1>
+	<hr>
+	<div class="container">
+		<div class="filler">
+			<div class="sample steam" status="off">
+				<button type="button" id="view" class="btn btn-default">View</button>
+				<button type="button" id="info_steam" class="btn btn-default">Info</button>
+				<div class="mask">
+				</div>
+				
+				<div class="text steam">
+				The "Steamhours" website has been made, to provide people using Games Distribution platform "Steam", 
+				with information about their games (playtime,statistics and so on) on base of Steam WebAPI.<br><br>
+				It was created using JavaScript (with jQuery) PHP7 and CSS3+HTML5. 
+				</div>
+				
+			</div>
 		</div>
-		<div class="col-md-4">
-		<ul class="misc">
-		<li>Ability to use Git</li>
-		<li>Usage of Windows and Linux as development enviroment</li>
-		</ul></div>
-		<div class="col-md-4">
-		<ul class="back-end">
-		<li>PHP 5/7</li>
-		<li>SQL(MySQL,PostGreSQL)</li>
-		<li>Usage of Laravel & Codeigniter</li>
-		<li>WebSockets & NodeJS</li>
-		<li>Usage of Wordpress and creation of themes</li>
-		</ul></div>
-	</div>
-	<hr style="width:50%;border-color:#D4D4D4;">
+		
+		<div class="filler">
+			<div class="sample portfolio" status="off">
+				<button type="button" id="view" class="btn btn-default">View</button>
+				<button type="button" class="btn btn-default info portfolio">Info</button>
+				<div class="mask">
+				</div>
+				
+				<div class="text portfolio">
+				My portfolio was my first project after learning the basics of Web Development.<br><br>
+			
+				Technologies used in creation of it: HTML5,CSS3 and Javascript with SVGInject library. 
+				</div>
+			</div>
+		</div>
 </div>
 
 <div id="footer">
@@ -60,9 +72,14 @@
 		</ul>
 		</div>
 		<div class="col-md-6">
-			<p style="clear:both;margin-top:25px;">Media</p>
 		</div>
 	</div>
 </div>
 </body>
+<script>
+var svg = document.querySelectorAll('img.svg');
+
+	  // Do the injection
+	SVGInjector(svg);
+</script>
 </html>
