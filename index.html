@@ -1,34 +1,36 @@
-<!DOCTYPE HTML>
-<html lang="en">
+<!DOCTYPE html>
+<html>
+
 <head>
   <title>A webdev's modest portfolio</title>
   <meta charset="UTF-8">
   <meta name="keywords" content="portfolio,web,webdev,frontend,backend">
   <meta name="description" content="Webdeveloper portfolio">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet" href="style.css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="script.js"></script>
-<script src="node_modules/svg-injector/svg-injector.js"></script>
-</head>
-<body>
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="scripts/script.js"></script>
+<script src="scripts/svg-injector.js"></script>
+</head>
+
+<body>
 <div id="image-intro">
 <nav id="navigation">
 <ul>
-<li>Home</li>
-<li>Contact</li>
+<li><a href="#image-intro">Home</a></li>
+<li><a href="#skills">Samples</a></li>
 </ul>
 </nav>
- <h1>Hello! I'm Lukas, a Back-end WebDeveloper currently residing in HIDDEN.</h1>
+ <h1>Hello! I'm Lukas, a Back-end WebDeveloper currently residing in Poland.</h1>
   <a href="#skills" id="button-main">View my works</a>
 </div>
 
-
 <div id="skills">
 	<h1> Samples </h1>
-	<hr>
+	<hr style="border-color:#D4D4D4;width:960px;">
 	<div class="container">
 		<div class="filler">
 			<div class="sample steam" status="off">
@@ -68,14 +70,19 @@
 	<div class="row">
 		<div class="col-md-6">
 		<ul style="list-style:none;margin-top:25px;" class="contact">
-		 <li>Phone number:48+ 791279085</li>
-		 <li>Hidden</li>
-		 <li>Hidden for now</li>
+		 <li>Phone number: 48+ 791279085</li>
+		 <li>E-Mail: alfverified@gmail.com</li>
 		</ul>
 		</div>
-		<div class="col-md-6">
+		<div class="col-md-6 svg">
+			<img src="icons/github.svg" alt="Github" class="svg">
 		</div>
 	</div>
 </div>
+<script>
+var svg = document.querySelectorAll('img.svg');
+SVGInjector(svg);
+</script>
 </body>
+
 </html>

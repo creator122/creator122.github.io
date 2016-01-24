@@ -5,7 +5,7 @@ $(function(){
 	var position = $(".sample.steam").offset();
 	var offset = position.left;
 	
-	var position2 = $(".sample.steam").offset();
+	var position2 = $(".sample.portfolio").offset();
 	var offset2 = position2.left;
 	
 	$(".info.steam").click(function(){

@@ -3,6 +3,22 @@ html{
 	width:100%;
 	height:100%;
 	overflow-x:hidden;
+	margin:0;
+	padding:0;
+}
+body{
+height:100%;
+width:100%;
+background:url(img/photo_city.jpg) no-repeat center center fixed;
+background-size:cover;
+}
+svg{
+	height:50px;
+	width:50px;
+}
+.svg{
+	position:relative;
+	bottom:20px;
 }
 button{
 	background: none;
@@ -18,16 +34,17 @@ button{
     -moz-user-select: none;
     -ms-user-select: none;
 }
-}
-body{
-width:100%;
-height:100%;
-overflow-x:hidden;
-}
 #navigation{
  width:100%;
  height:75px;
- background-color:black;
+ }
+ #navigation a{
+	 color:white;
+	 transition:0.2s;
+ }
+ #navigation a:hover{
+	 color:#30C9FC;
+	 text-decoration:none;
  }
  #navigation ul{
  position:relative;
@@ -40,15 +57,10 @@ overflow-x:hidden;
  color:white;
  font-size:1.2em;
  }
- #navigation ul li:hover{
- background-color:#363636;
- cursor:pointer;
- }
 #image-intro{
  height:1080px;
  max-width:1900px;
  margin:0 auto;
- background:url(http://i.imgur.com/kYqaluR.jpg) no-repeat center center fixed;
 -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -60,11 +72,11 @@ overflow-x:hidden;
  font-family:Lato !important;
  color:#E0E0E0;
  position:relative;
- top:40%;
+ top:35%;
  }
   #button-main{
 	position:relative;
-	top:45%;
+	top:40%;
 	left:43%;
 	padding:12px;
 	border:1px solid white;
@@ -88,9 +100,10 @@ overflow-x:hidden;
 	position:relative;
 	}
  #skills{
- height:500px;
+height:500px;
  width:100%;
  margin-bottom:50px;
+ background-color:#F2F2F2;
  }
  #skills h1{
  text-align:center;
@@ -191,7 +204,7 @@ overflow-x:hidden;
  }
  #footer{
 position:relative;
- height:150px;
+ height:105px;
  width:100%;
  margin:0 auto;
  text-align:center;
