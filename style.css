@@ -9,7 +9,7 @@ html{
 body{
 height:100%;
 width:100%;
-background:url(img/photo_city.jpg) no-repeat center center fixed;
+background:url(photo_city.jpg) no-repeat center center fixed;
 background-size:cover;
 }
 svg{
@@ -58,7 +58,7 @@ button{
  font-size:1.2em;
  }
 #image-intro{
- height:1080px;
+ height:100%;
  max-width:1900px;
  margin:0 auto;
 -webkit-background-size: cover;
@@ -100,9 +100,8 @@ button{
 	position:relative;
 	}
  #skills{
-height:500px;
+ height:500px;
  width:100%;
- margin-bottom:50px;
  background-color:#F2F2F2;
  }
  #skills h1{
@@ -126,7 +125,7 @@ height:500px;
  .sample.steam{
 	 float:left;
 	 position:relative;
-	 background:url(img/steam_image_small.png) no-repeat center center;
+	 background:url(steam_image_small.png) no-repeat center center;
 	 background-size:cover;
 	 height:350px;
 	 width:380px;
@@ -134,7 +133,7 @@ height:500px;
  .sample.portfolio{
 	 float:left;
 	 position:relative;
-	 background:url(img/portfolio_image_small.png) no-repeat center center;
+	 background:url(portfolio_image_small.png) no-repeat center center;
 	 background-size:cover;
 	 height:350px;
 	 width:380px;
@@ -203,7 +202,7 @@ height:500px;
 	 border:2px solid green;
  }
  #footer{
-position:relative;
+	position:relative;
  height:105px;
  width:100%;
  margin:0 auto;
@@ -263,6 +262,9 @@ position:relative;
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px) {
  /*Footer*/
+ #skills{
+	 height:100%;
+ }
  .container{
 	 margin-bottom:450px;
  }
@@ -292,6 +294,9 @@ position:relative;
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
+	#skills{
+		height:100%;
+	}
 	.text.steam{
 		position:absolute;
 		right:500px;
@@ -303,17 +308,14 @@ position:relative;
 		margin-bottom:450px;
 	}
 	 /*Skills section*/
-	 #footer{
-	 position:relative;
-	 font-size:1em;
-	 text-align:center;
-	 height:230px;
- }
  .col-md-4{
 	 width:100%;
  }
  #view{
 	 left:325px;
+ }
+ #footer{
+	 height:25%;
  }
  .mask{
 	 background-color:yellow;
