@@ -2,6 +2,7 @@
 html{
 	width:100%;
 	height:100%;
+	overflow-x:hidden;
 }
 button{
 	background: none;
@@ -86,50 +87,13 @@ overflow-x:hidden;
 	height:350px;
 	position:relative;
 	}
-	.square_1{
-	position:relative;
-	width:50px;
-	height:50px;
-	right:200px;
-	background-color:red;
-	}
-	.square_2{
-	position:absolute;
-	right:px;
-	width:50px;
-	height:50px;
-	background-color:red;
-	}
- .row{
-	 display:flex;
-	 flex-direction:row;
-	 justify-content:space-around;
- }
  #skills{
- height:350px;
+ height:500px;
  width:100%;
+ margin-bottom:50px;
  }
  #skills h1{
  text-align:center;
- }
- .col-md-4 ul{
- text-align:center;
- margin-top:10%;
- }
- .col-md-4 ul li{
- list-style:none;
- }
- .col-md-4 .front-end::before{
- content:"Front end:";
- font-size:1.5em;
- }
-  .col-md-4 .misc::before{
- content:"Miscallenous:";
- font-size:1.5em;
- }
-  .col-md-4 .back-end::before{
- content:"Back end:";
- font-size:1.5em;
  }
  .mask{
 	 position:absolute;
@@ -149,7 +113,7 @@ overflow-x:hidden;
  .sample.steam{
 	 float:left;
 	 position:relative;
-	 background:url(img/steam_image_small.png) no-repeat center center;
+	 background:url(steam_image_small.png) no-repeat center center;
 	 background-size:cover;
 	 height:350px;
 	 width:380px;
@@ -157,7 +121,7 @@ overflow-x:hidden;
  .sample.portfolio{
 	 float:left;
 	 position:relative;
-	 background:url(img/portfolio_image_small.png) no-repeat center center;
+	 background:url(portfolio_image_small.png) no-repeat center center;
 	 background-size:cover;
 	 height:350px;
 	 width:380px;
@@ -166,15 +130,14 @@ overflow-x:hidden;
 	 opacity:0.2;
  }
  .text.steam{
-	 position:absolute;
 	 left:380px;
+	 position:absolute;
 	 opacity:0.6;
 	 display:none;
 	 height:350px;
 	 color:white;
-	 width:690px;
+	 width:0;
 	 background-color:black;
-	 float:right;
  }
  .text.portfolio{
 	 position:absolute;
@@ -183,7 +146,7 @@ overflow-x:hidden;
 	 display:none;
 	 height:350px;
 	 color:white;
-	 width:690px;
+	 width:0;
 	 background-color:black;
 	 float:right;
  }
@@ -228,7 +191,6 @@ overflow-x:hidden;
  }
  #footer{
 position:relative;
-top:100px;
  height:150px;
  width:100%;
  margin:0 auto;
@@ -288,9 +250,10 @@ top:100px;
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px) {
  /*Footer*/
+ .container{
+	 margin-bottom:450px;
+ }
  #footer{
-	 margin-top:50%;
-	 position:relative;
 	 font-size:0.965em;
 	 text-align:center;
 	 height:230px;
@@ -299,80 +262,72 @@ top:100px;
 	 position:relative;
 	 right:15px;
  }
- .mask:hover{
-	 background-color:purple;
- }
- .row{
+ .container{
 	 flex-direction:column;
+	 height:365px;
  }
- .main_steam{
+ .filler{
 	 margin:0 auto;
-	 margin-bottom:15px;
+	 margin-bottom:25px;
+	 position:relative;
+	 top:250px;
  }
- .main_portfolio{
-	 margin:0 auto;
-	 margin-bottom:15px;
- }
- .main_project{
-	 margin:0 auto;
-	 margin-bottom:15px;
+ .mask{
+	 background-color:pink;
  }
 }
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
+	.text.steam{
+		position:absolute;
+		right:500px;
+	}
 	 #button-main{
 	 left:35%;
  }
+	.container{
+		margin-bottom:450px;
+	}
 	 /*Skills section*/
- #skills ul{
-	 position:relative;
-	 right:15px;
- }
 	 #footer{
 	 position:relative;
 	 font-size:1em;
-	 margin-top:65%;
 	 text-align:center;
 	 height:230px;
- }
- #footer ul{
-	 position:relative;
-	 right:15px;
- }
- .row{
-	 flex-direction:column;
  }
  .col-md-4{
 	 width:100%;
  }
+ #view{
+	 left:325px;
+ }
  .mask{
-	 position:relative;
+	 background-color:yellow;
+	 position:absolute;
 	 margin:0 auto;
-	 background-color:red;
 	 width:405px;
 	 height:350px;
 	 z-index:99;
  }
- .main_steam{
-	 float:none;
+ .text.steam{
+	 top:350px;
+	 left:0;
+ }
+ .sample.steam{
+	 left:200px;
 	 width:406px;
 	 height:350px;
 	 margin:0 auto;
 	 margin-top:20px;
 	 margin-bottom:30px;
  }
- .main_portfolio{
+ .sample.portfolio{
+	 top:450px;
 	 width:406px;
 	 height:350px;
 	 margin:0 auto;
-	 margin-bottom:30px;
- }
- .main_project{
-	 width:406px;
-	 height:350px;
-	 margin:0 auto;
-	 margin-bottom:20px;
+	 right:200px;
  }
 }
 
@@ -403,14 +358,9 @@ top:100px;
 	 left:25%;
  }
  /*Skills section*/
- #skills ul{
-	 position:relative;
-	 right:15px;
- }
  /*Footer*/
  #footer{
 	 position:relative;
-	 top:35%;
 	 font-size:0.965em;
 	 text-align:center;
 	 height:230px;
@@ -418,9 +368,6 @@ top:100px;
  #footer ul{
 	 position:relative;
 	 right:15px;
- }
- .row{
-	 flex-direction:column;
  }
  .main_steam{
 	 width:100%;
@@ -436,10 +383,10 @@ top:100px;
 @media (max-width: 420px){
 	#footer{
 		position:relative;
-		top:400px;
 	}
 	.mask{
 	 background-color:black;
 	 height:350px;
+	 width:405px;
  }
 }
