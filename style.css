@@ -113,7 +113,7 @@ overflow-x:hidden;
  .sample.steam{
 	 float:left;
 	 position:relative;
-	 background:url(steam_image_small.png) no-repeat center center;
+	 background:url(img/steam_image_small.png) no-repeat center center;
 	 background-size:cover;
 	 height:350px;
 	 width:380px;
@@ -121,7 +121,7 @@ overflow-x:hidden;
  .sample.portfolio{
 	 float:left;
 	 position:relative;
-	 background:url(portfolio_image_small.png) no-repeat center center;
+	 background:url(img/portfolio_image_small.png) no-repeat center center;
 	 background-size:cover;
 	 height:350px;
 	 width:380px;
