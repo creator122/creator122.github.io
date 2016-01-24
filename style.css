@@ -9,7 +9,7 @@ html{
 body{
 height:100%;
 width:100%;
-background:url(photo_city.jpg) no-repeat center center fixed;
+background:url(img/photo_city.jpg) no-repeat center center fixed;
 background-size:cover;
 }
 svg{
@@ -125,7 +125,7 @@ button{
  .sample.steam{
 	 float:left;
 	 position:relative;
-	 background:url(steam_image_small.png) no-repeat center center;
+	 background:url(img/steam_image_small.png) no-repeat center center;
 	 background-size:cover;
 	 height:350px;
 	 width:380px;
@@ -133,7 +133,7 @@ button{
  .sample.portfolio{
 	 float:left;
 	 position:relative;
-	 background:url(portfolio_image_small.png) no-repeat center center;
+	 background:url(img/portfolio_image_small.png) no-repeat center center;
 	 background-size:cover;
 	 height:350px;
 	 width:380px;
