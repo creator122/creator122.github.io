@@ -33,15 +33,20 @@ $(function(){
 			else{
 			
 			$(".sample.steam").attr("status","off");
-			$( ".sample.steam" ).animate({
-				right: "-="+offset+"px"
+			$( ".text.steam" ).animate({
+				width: 0
 			}, 1500, function() {
-				$(".text.steam").css("display","none");
-				$(".sample.portfolio").css("visibility","visible");
+				$(".sample.steam").animate({
+					right: "-="+offset+"px"
+				}, 1500, function(){
+					$(".text.steam").css("display","none");
+					$(".sample.portfolio").css("visibility","visible");
+				});
 			});
 		}
 });
 	$(".info.portfolio").click(function(){
+		
 		if ($(".sample.portfolio").attr("status") == "off"){
 				$(".sample.steam").css("visibility","hidden");
 				$(".sample.portfolio").attr("status","on")
@@ -58,14 +63,19 @@ $(function(){
 					});	
 				});
 			}
+			
 			else{
 				
 			$(".sample.portfolio").attr("status","off");
-			$( ".sample.portfolio" ).animate({
-			right: "-="+offset2+"px"
+			$( ".text.portfolio" ).animate({
+			width: 0
 			}, 1500, function() {
-			$(".text.portfolio").css("display","none");
-			$(".sample.steam").css("visibility","visible");
+				$(".sample.portfolio").animate({
+					right: "-="+offset2+"px"
+				},1500, function(){
+					$(".text.portfolio").css("display","none");
+					$(".sample.steam").css("visibility","visible");
+				});
 			});
 			}
 	});
