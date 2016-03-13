@@ -27,9 +27,13 @@ $(function(){
 				
 				if ($(window).width()>750){
 					var textBox = {width: 500};
+					width = true;
+					height = false;
 				}
 				else{
 					var textBox = {height: 500};
+					height = true;
+					width = false;
 				}
 				
 				$(".text.steam").animate(textBox, 1500, function(){
@@ -39,20 +43,25 @@ $(function(){
 	}
 		
 		else{
-			
-			$(steam).attr("status","off")
-			$( ".text.steam" ).animate({
-			width: 0
-			}, 1500, function() {
-				$(".text.steam").css("display","none");
-				$(steam).animate({
-					right: "-="+offset+"px"
-				}, 1500, function(){
-				$(steam).attr("status","off");
-				$(portfolio).css("visibility","visible");
-			});
-		});
-		
+			if (height == true && width == false){
+				$( ".text.steam" ).animate({height: 0}, 1500, function() {
+					$(".text.steam").css("display","none");
+					$(steam).attr("status","off");
+					$(portfolio).css("visibility","visible");
+				});
+			}
+			else{
+				$(steam).attr("status","off")
+					$( ".text.steam" ).animate({width: 0}, 1500, function() {
+						$(".text.steam").css("display","none");
+						$(steam).animate({
+							right: "-="+offset+"px"
+					}, 1500, function(){
+						$(steam).attr("status","off");
+						$(portfolio).css("visibility","visible");
+					});
+				});
+			}
 	}
 });	
 	
