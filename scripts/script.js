@@ -3,7 +3,7 @@ $(function(){
 	var toggled = false;
 	
 	var elementWidth = $(".square").width();
-	var width = $(window).width()-elementWidth;
+	var widthBlock = $(window).width()-elementWidth;
 	
 	//Check the window height and determine the width of div.
 
@@ -16,28 +16,22 @@ $(function(){
 		var position = $(element).offset();
 		var offset = position.left;
 		
-		for (child in children){
-			console.log(child[0]);
-		}
-		
 		if ($(element).attr("status") == "off"){
 			$(element).attr("status","on")
 			$(element).animate({
-				right: "+="+offset+"px"
+				right: offset
 			}, 1500, function(target) {
 				$(text).css("display","block");
 				
 				if ($(window).width()>750){
-					var textBox = {width: 500};
+					var textBox = {width: widthBlock};
 					width = true;
 					height = false;
-					hide = false;
 				}
 				else{
-					var textBox = {height: 200};
+					var textBox = {height: 250};
 					height = true;
 					width = false;
-					hide = true;
 				}
 				
 				$(text).animate(textBox, 1500, function(){
@@ -47,9 +41,7 @@ $(function(){
 	}
 		
 		else{
-			
 			var offset = position.left;
-			
 			if (height == true && width == false){
 				$( text ).animate({height: 0}, 1500, function() {
 					$(text).css("display","none");
