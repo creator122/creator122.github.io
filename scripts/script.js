@@ -4,33 +4,35 @@ $(function(){
 	
 	var steam = ".sample.steam";
 	var portfolio = ".sample.portfolio";
-	
+	var text = ".text";
+	var elementWidth = $(".square").width();
 	var toggled = false;
-	var windowWidth = window.innerWidth;
+	var noice = {}
+	
+	var width = $(window).width()-elementWidth;
 	
 	var position = $(".sample.steam").offset();
 	var offset = position.left;
 	
 	//Check the window height and determine the width of div.
-	
-	if (windowWidth < 700){
-		var width = 405;
-	}
-	else{
-		var width = (windowWidth/2);
-	}
-	
-	$("button.steam").click(function(e){
+
+	$(".info.steam").click(function(e){
 		if ($(steam).attr("status") == "off"){
 			$(portfolio).css("visibility","hidden");
 			$(steam).attr("status","on")
 			$( steam ).animate({
 			right: "+="+offset+"px"
-			}, 1500, function() {
+			}, 1500, function(target) {
 				$(".text.steam").css("display","block");
-				$(".text.steam").animate({
-					width: width
-				}, 1500, function(){
+				
+				if ($(window).width()>750){
+					var textBox = {width: 500};
+				}
+				else{
+					var textBox = {height: 500};
+				}
+				
+				$(".text.steam").animate(textBox, 1500, function(){
 				$(steam).attr("status","on");
 			});
 		});
@@ -54,7 +56,7 @@ $(function(){
 	}
 });	
 	
-	$("button.portfolio").click(function(){
+	$(".info.portfolio").click(function(){
 		if ($(portfolio).attr("status") == "off"){
 			$(steam).css("visibility","hidden");
 			$( portfolio ).animate({
@@ -62,7 +64,7 @@ $(function(){
 			}, 1500, function() {
 				$(".text.portfolio").css("display","block");
 				$(".text.portfolio").animate({
-					width: width
+					target: width
 				}, 1500, function(){
 				$(portfolio).attr("status","on");
 			});

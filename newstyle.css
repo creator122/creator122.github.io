@@ -17,7 +17,6 @@ a,a:hover{
 html{
 	width:100%;
 	height:100%;
-	overflow-x:hidden;
 	margin:0;
 	padding:0;
 }
@@ -99,10 +98,12 @@ button{
 	 background-size:cover;
  }
  .square.steam{
-	 background: url(steam_small.png) no-repeat center center;
+	 background: url(big_steam.png) no-repeat center center;
+	 background-size:cover;
  }
  .square.portfolio{
-	 background: url(portfolio_small.png) no-repeat center center;
+	 background: url(img/portfolio_small.png) no-repeat center center;
+	 background-size:cover;
  }
  #image-intro h1{
  text-align:center;
@@ -121,18 +122,23 @@ button{
 	 position:Relative;
 	 top:10px;
  }
-  #button-main{
-	position:relative;
-	top:40%;
-	left:43%;
-	padding:12px;
-	border:1px solid white;
-	background-color: rgba(165, 166, 166, 0.3);
-	text-decoration:none;
-	color:black;
-	font-size:1.5em;
-	border-radius:5px;
+ #image-intro span{
+	 display:block;
+	 position:relative;
+	 top:43%;
+	 left:43%;
  }
+ 
+   #button-main{
+	  padding:12px;
+	  border:1px solid white;
+	  background-color: rgba(165, 166, 166, 0.3);
+	  text-decoration:none;
+	  color:black;
+	  font-size:1.5em;
+	  border-radius:5px;
+ }
+ 
  #button-main:hover{
  background-color:#292929;
  color:white;
@@ -170,13 +176,16 @@ button{
  }
  .info{
 	 position:absolute;
-	 bottom:20px;
+	 bottom:25px;
 	 left:75px;
 	 color:#f0f0f0;
 	 padding:5px 35px 5px 35px;
 	 border-radius:3px;
 	 background-color:#003678;
 	 z-index:100;
+ }
+ .info:hover{
+	 cursor:pointer;
  }
  .view{
 	 position:absolute;
@@ -229,15 +238,15 @@ button{
  }
  .text{
 	 position:absolute;
-	 height:325px;
-	 opacity:0.6;
-	 width:0;
-	 color:white;
-	 display:none;
 	 background-color:black;
-	 margin:0 auto;
-	 bottom:0;
+	 opacity:0.6;
+	 color:white;
+	 bottom:1px;
 	 left:600px;
+	 height:325px;
+	 width:0;
+	 background-color:red;
+	 display:none;
  }
  #footer,#wrapper:after{
 	 height:105px;
@@ -249,22 +258,28 @@ button{
  #footer{
  position:relative;
  width:100%;
+ height:auto;
  margin:0 auto;
  text-align:center;
  background-color:#171717;
  color:white;
  font-size:100%;
  }
+ .row{
+	 height:auto;
+ }
  svg{
-	 top:45px;
-	 position:absolute;
-	 width:55px;
-	 height:55px;
 	 fill:#737373;
 	 transition:0.5s;
+	 margin:0 10px 0 10px;
+ }
+ 
+ .svg{
+	 position:relative;
+	 top:25px;
  }
  .github{
-	 right:220px;
+	 left:150px;
  }
  .github:hover{
 	fill:#006496;
@@ -312,6 +327,9 @@ button{
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px) {
  /*Footer*/
+  #image-intro span{
+	  left:40%;
+  }
  #skills{
 	 height:100%;
  }
@@ -321,7 +339,7 @@ button{
  #footer{
 	 font-size:0.965em;
 	 text-align:center;
-	 height:230px;
+	 height:200px;
  }
  #footer ul{
 	 position:relative;
@@ -347,16 +365,9 @@ button{
 	#skills{
 		height:100%;
 	}
-	.text.steam{
-		position:absolute;
-		right:500px;
-	}
-	 #button-main{
-	 left:35%;
+ #image-intro span{
+	 left:39%;
  }
-	.container{
-		margin-bottom:450px;
-	}
 	 /*Skills section*/
  .col-md-4{
 	 width:100%;
@@ -365,25 +376,29 @@ button{
 	 left:325px;
  }
  #footer{
-	 height:25%;
+	 height:190px;
+ }
+ .square{
+	 width:100vw;
+ }
+ .info{
+	 left:50px;
+ }
+ .view{
+	 left:65vw;
+ }
+ svg{
+	 top:0;
  }
  .mask{
 	 background-color:yellow;
  }
  .text{
 	 position:relative;
-	 opacity:0.6;
-	 color:white;
-	 top:0;
+	 left:0;
 	 bottom:0;
-	 left:0;
-	 right:0;
-	 width:575px;
-	 height:256px;
- }
- .text.steam{
-	 top:350px;
-	 left:0;
+	 width:97vw;
+	 height:0;
  }
 }
 
@@ -391,7 +406,9 @@ button{
 
 /* Portrait phones and smaller */
 @media (max-width: 480px) {
-	
+ #image-intro span{
+	 left:10%;
+ }
  #navigation{
 	 height:100px;
  }
@@ -410,7 +427,7 @@ button{
  #image-intro{
 	 height:1185px;
  }
- #button-main{
+ span{
 	 left:25%;
  }
  /*Skills section*/
@@ -420,6 +437,17 @@ button{
 	 font-size:0.965em;
 	 text-align:center;
 	 height:230px;
+ }
+ .info{
+	 left:1vw;
+ }
+ .view{
+	 left:65vw;
+ }
+ .text{
+	 width:90vw;
+	 height:0;
+	 bottom:0;
  }
  #footer ul{
 	 position:relative;
@@ -434,6 +462,9 @@ button{
 }
 
 @media (max-width: 420px){
+	 #image-intro span{
+		 left:25%;
+	 }
 	#footer{
 		position:relative;
 	}

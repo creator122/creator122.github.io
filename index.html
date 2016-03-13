@@ -1,34 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link rel="stylesheet" href="newstyle.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script src="scripts/svg-injector.js"></script>
 <script src="scripts/script.js"></script>
 </head>
 
 <body>
-
-<div id="image-intro">
-<nav id="navigation">
-<ul>
-<li><a href="#image-intro">Home</a></li>
-<li><a href="#skills">Samples</a></li>
-</ul>
-</nav>
- <h1>Hello! I'm Lukas, a Back-end WebDeveloper currently residing in Poland.</h1>
-  <a href="#skills" id="button-main">View my works</a>
+	<div id="image-intro">
+	<nav id="navigation">
+		<ul>
+			<li><a href="#image-intro">Home</a></li>
+			<li><a href="#skills">Samples</a></li>
+		</ul>
+	</nav>
+  <h1>Hello! I'm Lukas, a Back-end WebDeveloper currently residing in Poland.</h1>
+  <span><a href="#skills" id="button-main">View my works</a></span>
 </div>
 
 <h1 style="text-align:center;position:relative;top:60px;" class="samples">Samples</h1>
 <div id="wrapper">
 	<div class="sample steam" status="off">
 		<div class="square steam">
+			<div class="info steam">Info</div>
+			<a href="abc" class="steam view">View</a>
 		</div>
-		<button class="steam info">Info</button>
-		<a href="abc" class="steam view">View</a>
 		<div class="text steam">
 		The "Steamhours" website has been made, to provide people using Games Distribution platform "Steam", with information 
 		about their games (playtime,statistics and so on) on base of Steam WebAPI.<br><br>
@@ -40,7 +41,7 @@
 	<div class="sample portfolio" status="off">
 		<div class="square portfolio">
 		</div>
-		<button class="portfolio info">Info</button>
+		<span class="info portfolio">Info</span>
 		<a href="abc" class="portfolio view">View</a>
 		<div class="text portfolio">
 		My portfolio was my first project after learning the basics of Web Development.<br><br>
@@ -53,14 +54,14 @@
 <div id="footer">
 	<div class="row">
 		<div class="col-md-6">
-		<ul style="list-style:none;margin-top:25px;" class="contact">
-		 <li>Phone number: 48+ 791279085</li>
-		 <li>E-Mail: alfverified@gmail.com</li>
-		</ul>
+			<ul style="list-style:none;margin-top:25px;" class="contact">
+				 <li>Phone number: 48+ 791279085</li>
+				 <li>E-Mail: alfverified@gmail.com</li>
+			</ul>
 		</div>
 		<div class="col-md-6 svg">
-			<img src="img/git.svg" alt="Github" class="insert-me github">
-			<img src="img/google_plus.svg" alt="Google plus" class="insert-me google">
+			<img src="git.svg" alt="Github" class="insert-me github">
+			<img src="die.svg" alt="Google plus" class="insert-me google">
 		</div>
 	</div>
 </div>
@@ -72,5 +73,4 @@
   SVGInjector(mySVGsToInject);
 </script>
 </body>
-
 </html>

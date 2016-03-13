@@ -1,1 +1,407 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300);html,body{width:100%;height:100%}body{overflow-x:hidden}h1,p,email,div,span,quote,h2,h3,h4,h5,h6,input,button{margin:0;padding:0;left:0;right:0;top:0;bottom:0}#navigation{width:100%;height:75px;background-color:#000}#navigation ul{position:relative;top:40%}#navigation ul li{list-style:none;display:inline;padding:32px 30px 26px;color:#fff;font-size:1.2em}#navigation ul li:hover{background-color:#363636;cursor:pointer}#image-intro{height:1080px;max-width:100%;background:url(http://i.imgur.com/kYqaluR.jpg) no-repeat center center fixed;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;background-attachment:scroll}#image-intro h1{text-align:center;font-family:Lato!important;color:#e0e0e0;position:relative;top:40%}#button-main{position:relative;top:45%;left:43%;padding:12px;border:1px solid #fff;background-color:rgba(165,166,166,.3);text-decoration:none;color:#000;font-size:1.5em;border-radius:5px}#button-main:hover{background-color:#292929;color:#fff;transition:.5s}#skills{height:350px;width:100%}#skills h1,.col-md-4 ul{text-align:center}.col-md-4 ul{margin-top:10%}.col-md-4 ul li{list-style:none}.col-md-4 .front-end::before{content:"Front end:";font-size:1.5em}.col-md-4 .misc::before{content:"Miscallenous:";font-size:1.5em}.col-md-4 .back-end::before{content:"Back end:";font-size:1.5em}#footer{height:150px;width:100%;text-align:center;background-color:#171717;color:#fff}#footer .contact::before{content:"Contact";display:block;margin-bottom:5px}@media (min-width:768px) and (max-width:991px){#footer{margin-top:5%;position:relative;top:300px;font-size:.965em;text-align:center;height:230px}#footer ul{position:relative;right:15px}}@media (max-width:767px){#button-main{left:35%}#skills ul{position:relative;right:15px}#footer{margin-top:5%;position:relative;top:260px;font-size:1em;text-align:center;height:230px}#footer ul{position:relative;right:15px}}@media (max-width:480px){#navigation{height:100px}#navigation ul li{display:block;margin:0;padding:25px;text-align:center}#navigation ul{margin:0;padding:0;top:0}#image-intro{height:1185px}#button-main{left:25%}#skills ul{position:relative;right:15px}#footer{position:relative;top:250px;font-size:.965em;text-align:center;height:230px}#footer ul{position:relative;right:15px}}
+@import url(https://fonts.googleapis.com/css?family=Lato:300);
+html{
+	width:100%;
+	height:100%;
+	overflow-x:hidden;
+	margin:0;
+	padding:0;
+}
+body{
+height:100%;
+width:100%;
+background:url(img/photo_city.jpg) no-repeat center center fixed;
+background-size:cover;
+}
+svg{
+	height:50px;
+	width:50px;
+}
+.svg{
+	position:relative;
+	bottom:20px;
+}
+button{
+	background: none;
+    border: 0;
+    color: inherit;
+    /* cursor: default; */
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    -webkit-appearance: button; /* for input */
+    -webkit-user-select: none; /* for button */
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+#navigation{
+ width:100%;
+ height:75px;
+ }
+ #navigation a{
+	 color:white;
+	 transition:0.2s;
+ }
+ #navigation a:hover{
+	 color:#30C9FC;
+	 text-decoration:none;
+ }
+ #navigation ul{
+ position:relative;
+ top:40%;
+ }
+ #navigation ul li{
+ list-style:none;
+ display:inline;
+ padding:32px 30px 26px 30px;
+ color:white;
+ font-size:1.2em;
+ }
+#image-intro{
+ height:100%;
+ max-width:1900px;
+ margin:0 auto;
+-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment:scroll;
+ }
+ #image-intro h1{
+ text-align:center;
+ font-family:Lato !important;
+ color:#E0E0E0;
+ position:relative;
+ top:35%;
+ }
+  #button-main{
+	position:relative;
+	top:40%;
+	left:43%;
+	padding:12px;
+	border:1px solid white;
+	background-color: rgba(165, 166, 166, 0.3);
+	text-decoration:none;
+	color:black;
+	font-size:1.5em;
+	border-radius:5px;
+ }
+ #button-main:hover{
+ background-color:#292929;
+ color:white;
+ transition:0.5s;
+ }
+ .container{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-around;
+	width:100%;
+	height:350px;
+	position:relative;
+	}
+ #skills{
+ height:500px;
+ width:100%;
+ background-color:#F2F2F2;
+ }
+ #skills h1{
+ text-align:center;
+ }
+ .mask{
+	 position:absolute;
+	 height:350px;
+	 width:380px;
+	 z-index:99;
+	 background-color:#0FD443;
+	 opacity:0;
+	 transition:0.5s;
+ }
+ [class|=main]{
+	position:relative; 
+	background-size:cover;
+	height:350px;
+	width:380px;
+ }
+ .sample.steam{
+	 float:left;
+	 position:relative;
+	 background:url(img/steam_image_small.png) no-repeat center center;
+	 background-size:cover;
+	 height:350px;
+	 width:380px;
+ }
+ .sample.portfolio{
+	 float:left;
+	 position:relative;
+	 background:url(img/portfolio_image_small.png) no-repeat center center;
+	 background-size:cover;
+	 height:350px;
+	 width:380px;
+ }
+ .mask:hover{
+	 opacity:0.2;
+ }
+ .text.steam{
+	 left:380px;
+	 position:absolute;
+	 opacity:0.6;
+	 display:none;
+	 height:350px;
+	 color:white;
+	 width:0;
+	 background-color:black;
+ }
+ .text.portfolio{
+	 position:absolute;
+	 left:380px;
+	 opacity:0.6;
+	 display:none;
+	 height:350px;
+	 color:white;
+	 width:0;
+	 background-color:black;
+	 float:right;
+ }
+ button{
+	 position:absolute;
+	 top:300px;
+	 height:37px;
+	 width:63px;
+	 left:25px;
+	 color:white;
+	 z-index:100;
+	 text-decoration:none;
+ }
+ #view{
+	 left:295px;
+ }
+ .main_steam a{
+	 position:absolute;
+	 top:300px;
+	 left:295px;
+	 z-index:100;
+	 text-decoration:none;
+	 text-align:center;
+	 padding-top:7px;
+	 padding-right:15px;
+	 padding-left:15px;
+	 padding-bottom:7px;
+	 border:2px solid green;
+ }
+ .sample.portfolio a{
+	  position:absolute;
+	 top:300px;
+	 left:295px;
+	 z-index:100;
+	 text-decoration:none;
+	 text-align:center;
+	 padding-top:7px;
+	 padding-right:15px;
+	 padding-left:15px;
+	 padding-bottom:7px;
+	 border:2px solid green;
+ }
+ #footer{
+	position:relative;
+ height:105px;
+ width:100%;
+ margin:0 auto;
+ text-align:center;
+ background-color:#171717;
+ color:white;
+ font-size:100%;
+ }
+ svg{
+	 top:35px;
+	 position:absolute;
+	 width:75px;
+	 height:75px;
+	 fill:#737373;
+	 transition:0.5s;
+ }
+ svg:hover{
+	 fill:#25ABB3;
+ }
+ #footer .contact::before {
+	content:"Contact";
+	display:block;
+	margin-bottom:5px;
+ }
+ 
+ /*Ultra large screens*/
+ 
+ @media (min-width:1500px){
+	 #footer{
+		 width:1900px;
+	 }
+ }
+ 
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+	.mask{
+		background-color:blue;
+		width:320px;
+		height:350px;
+	}
+	.main_steam{
+		width:320px;
+	}
+	.main_portfolio{
+		width:320px;
+		height:350px;
+	}
+	.main_project{
+		width:320px;
+	}
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+ /*Footer*/
+ #skills{
+	 height:100%;
+ }
+ .container{
+	 margin-bottom:450px;
+ }
+ #footer{
+	 font-size:0.965em;
+	 text-align:center;
+	 height:230px;
+ }
+ #footer ul{
+	 position:relative;
+	 right:15px;
+ }
+ .container{
+	 flex-direction:column;
+	 height:365px;
+ }
+ .filler{
+	 margin:0 auto;
+	 margin-bottom:25px;
+	 position:relative;
+	 top:250px;
+ }
+ .mask{
+	 background-color:pink;
+ }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+	#skills{
+		height:100%;
+	}
+	.text.steam{
+		position:absolute;
+		right:500px;
+	}
+	 #button-main{
+	 left:35%;
+ }
+	.container{
+		margin-bottom:450px;
+	}
+	 /*Skills section*/
+ .col-md-4{
+	 width:100%;
+ }
+ #view{
+	 left:325px;
+ }
+ #footer{
+	 height:25%;
+ }
+ .mask{
+	 background-color:yellow;
+	 position:absolute;
+	 margin:0 auto;
+	 width:405px;
+	 height:350px;
+	 z-index:99;
+ }
+ .text.steam{
+	 top:350px;
+	 left:0;
+ }
+ .sample.steam{
+	 left:200px;
+	 width:406px;
+	 height:350px;
+	 margin:0 auto;
+	 margin-top:20px;
+	 margin-bottom:30px;
+ }
+ .sample.portfolio{
+	 top:450px;
+	 width:406px;
+	 height:350px;
+	 margin:0 auto;
+	 right:200px;
+ }
+}
+
+
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+	
+ #navigation{
+	 height:100px;
+ }
+ #navigation ul li{
+	 display:block;
+	 margin:0;
+	 padding:25px;
+	 text-align:center;
+ }
+ #navigation ul{
+	 margin:0;
+	 padding:0;
+	 top:0;
+ }
+ /*Big-image & it's button*/
+ #image-intro{
+	 height:1185px;
+ }
+ #button-main{
+	 left:25%;
+ }
+ /*Skills section*/
+ /*Footer*/
+ #footer{
+	 position:relative;
+	 font-size:0.965em;
+	 text-align:center;
+	 height:230px;
+ }
+ #footer ul{
+	 position:relative;
+	 right:15px;
+ }
+ .main_steam{
+	 width:100%;
+ }
+ .main_portfolio{
+	 width:100%;
+ }
+ .mask{
+	 height:350px;
+ }
+}
+
+@media (max-width: 420px){
+	#footer{
+		position:relative;
+	}
+	.mask{
+	 background-color:black;
+	 height:350px;
+	 width:405px;
+ }
+}
