@@ -2,69 +2,101 @@
 <html lang="en">
 
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="UTF-8">
+
+<!-- Meta tags -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8"/>
+<meta name="description" content="Portfolio of a web developer"/>
+<meta name="keywords" content="portfolio,web developer"/>
+<meta name="author" content="Łukasz Koczera"/>
+
+<!-- Load up resources -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link rel="stylesheet" href="newstyle.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script src="scripts/svg-injector.js"></script>
 <script src="scripts/script.js"></script>
+
 </head>
 
 <body>
-	<div id="image-intro">
+<!-- Navigation, got to clean it up. -->
+<header>
 	<nav id="navigation">
 		<ul>
 			<li><a href="#image-intro">Home</a></li>
 			<li><a href="#skills">Samples</a></li>
 		</ul>
 	</nav>
-  <h1>Hello! I'm Lukas, a Back-end WebDeveloper currently residing in Poland.</h1>
+  <h1>I'm Lukas, a Back-end WebDeveloper currently residing in Poland.</h1>
   <span><a href="#skills" id="button-main">View my works</a></span>
-</div>
+</header>
 
-<h1 style="text-align:center;position:relative;top:60px;" class="samples">Samples</h1>
-<div id="wrapper">
+<section id="samples">
+
+<p class="samples">Samples</p>
+
+	<!-- Parent div, set background on it -->
 	<div class="sample steam" status="off">
+		
+		<!-- First layer,mainly buttons buttons -->
 		<div class="square steam">
 			<div class="info steam">Info</div>
-			<a href="abc" class="steam view">View</a>
+			<a href="#" class="steam view">View</a>
 		</div>
+		
+		<!-- The content of slide-out div -->
 		<div class="text steam">
 		The "Steamhours" website has been made, to provide people using Games Distribution platform "Steam", with information 
 		about their games (playtime,statistics and so on) on base of Steam WebAPI.<br><br>
 		
 		It was created using JavaScript (with jQuery) PHP7 and CSS3+HTML5. 
 		</div>
+		
 	</div>
+
 	
 	<div class="sample portfolio" status="off">
 		<div class="square portfolio">
-				<span class="info portfolio">Info</span>
-			<a href="abc" class="portfolio view">View</a>
+			<div class="info portfolio">Info</div>
+			<a href="#" class="portfolio view">View</a>
 		</div>
+		
 		<div class="text portfolio">
-		My portfolio was my first project after learning the basics of Web Development.<br><br>
+			My portfolio was my first project after learning the basics of Web Development.<br><br>
 
-		Technologies used in creation of it: HTML5,CSS3 and Javascript with SVGInject library. 
+			Technologies used in creation of it: HTML5,CSS3 and Javascript with SVGInject library. 
 		</div>
 	</div>
-</div>
+</section>
 
-<div id="footer">
-	<div class="row">
-		<div class="col-md-6">
-			<ul style="list-style:none;margin-top:25px;" class="contact">
-				 <li>Phone number: 48+ 791279085</li>
-				 <li>E-Mail: alfverified@gmail.com</li>
+<!-- Footer, we inject SVG in here -->
+<footer>
+	<div class="contact-information">
+		<p>Contact me</p>
+		<div class="footer-list-wrap">
+			<ul>
+				<li>E-mail: alfverified@gmail.com</li>
+				<li>Phone number: (+48)791-279-085</li>
 			</ul>
 		</div>
-		<div class="col-md-6 svg">
-			<img src="img/git.svg" alt="Github" class="insert-me github">
-			<img src="img/google_plus.svg" alt="Google plus" class="insert-me google">
-		</div>
 	</div>
-</div>
+	<div class="jump-to">
+		<p>Return to previous sections</p>
+			<ul>
+				<li><a href="#navigation">Navigation</a></li>
+				<li><a href="#samples">Examples</a></li>
+			</ul>
+	</div>
+	<div class="medias">
+		<p>Find me on medias</p>
+		<ul>
+			<li>Github</li>
+			<li>Google Plus</li>
+		</ul>
+	</div>
+</footer>
+
 <script>
   // Elements to inject
   var mySVGsToInject = document.querySelectorAll('img.insert-me');

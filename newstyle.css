@@ -7,19 +7,24 @@ a,a:hover{
 	margin:0;
 	color:white;
 }
-#wrapper{
-	min-height:100% !important;
+section{
+	min-height: 100%;
 	width:100%;
-	margin-bottom:-105px;
-	display:flex;
-	flex-direction:column;
+	background-color:white;
+}
+section:after{
+  content: "";
+  display: block;
+}
+footer, section:after{
+	height: 142px; 
 }
 html{
 	width:100%;
 	height:100%;
+	overflow-x:hidden;
 	margin:0;
 	padding:0;
-	overflow-x:hidden;
 }
 body{
 height:100%;
@@ -33,11 +38,10 @@ svg{
 }
 .sample{
 	margin:0 auto;
+	width:600px;
+	height:325px;
+	margin-top:25px;
 	position:relative;
-	margin-bottom:50px;
-}
-.sample:first-child{
-	margin-top:80px;
 }
 .svg{
 	position:relative;
@@ -80,7 +84,7 @@ button{
  color:white;
  font-size:1.2em;
  }
-#image-intro{
+header{
  height:100%;
  max-width:1900px;
  margin:0 auto;
@@ -90,7 +94,7 @@ button{
   background-size: cover;
   background-attachment:scroll;
  }
- #image-intro a{
+ header a{
 	 font-family:Arial;
  }
  .square{
@@ -99,19 +103,24 @@ button{
 	 background-size:cover;
  }
  .square.steam{
-	 background: url(img/big_steam.png) no-repeat center center;
-	 background-size:cover;
+	 background: url(img/steam_small.png) no-repeat center center;
  }
  .square.portfolio{
 	 background: url(img/portfolio_small.png) no-repeat center center;
-	 background-size:cover;
  }
- #image-intro h1{
+ .square *:hover{
+	 cursor:pointer;
+ }
+ header h1{
  text-align:center;
  font-family:Lato !important;
  color:#E0E0E0;
  position:relative;
  top:35%;
+ }
+ .samples{
+	 text-align:center;
+	 font-size:2.5em;
  }
  .samples:after{
 	 content:"";
@@ -123,23 +132,18 @@ button{
 	 position:Relative;
 	 top:10px;
  }
- #image-intro span{
-	 display:block;
-	 position:relative;
-	 top:43%;
-	 left:43%;
+  #button-main{
+	position:relative;
+	top:40%;
+	left:43%;
+	padding:12px;
+	border:1px solid white;
+	background-color: rgba(165, 166, 166, 0.3);
+	text-decoration:none;
+	color:black;
+	font-size:1.5em;
+	border-radius:5px;
  }
- 
-   #button-main{
-	  padding:12px;
-	  border:1px solid white;
-	  background-color: rgba(165, 166, 166, 0.3);
-	  text-decoration:none;
-	  color:black;
-	  font-size:1.5em;
-	  border-radius:5px;
- }
- 
  #button-main:hover{
  background-color:#292929;
  color:white;
@@ -158,35 +162,18 @@ button{
 	position:relative;
 	}
 	
- #wrapper{
- min-height:100% !important;
- width:100%;
- background-color:#F2F2F2;
- margin-bottom:-105px;
- }
- #wrapper:after{
-	 content:"";
-	 display:block;
- }
- #skills:after{
-	 content:"";
-	 display:block;
- }
  #skills h1{
  text-align:center;
  }
  .info{
 	 position:absolute;
-	 bottom:25px;
+	 bottom:20px;
 	 left:75px;
 	 color:#f0f0f0;
 	 padding:5px 35px 5px 35px;
 	 border-radius:3px;
 	 background-color:#003678;
 	 z-index:100;
- }
- .info:hover{
-	 cursor:pointer;
  }
  .view{
 	 position:absolute;
@@ -211,7 +198,7 @@ button{
 	 opacity:0.2;
 	 cursor:pointer;
  }
- #image-intro button{
+ header button{
 	 position:absolute;
 	 top:300px;
 	 height:37px;
@@ -239,47 +226,30 @@ button{
  }
  .text{
 	 position:absolute;
-	 background-color:black;
-	 opacity:0.6;
-	 color:white;
-	 bottom:1px;
-	 left:600px;
 	 height:325px;
+	 opacity:0.6;
 	 width:0;
+	 color:white;
 	 display:none;
- }
- #footer,#wrapper:after{
-	 height:105px;
+	 background-color:black;
+	 margin:0 auto;
+	 bottom:0;
+	 left:600px;
  }
  button.info{
 	 position:absolute;
 	 top:275px;
  }
- #footer{
- position:relative;
- width:100%;
- height:auto;
- margin:0 auto;
- text-align:center;
- background-color:#171717;
- color:white;
- font-size:100%;
- }
- .row{
-	 height:auto;
- }
  svg{
+	 top:45px;
+	 position:absolute;
+	 width:55px;
+	 height:55px;
 	 fill:#737373;
 	 transition:0.5s;
-	 margin:0 10px 0 10px;
- }
- 
- .svg{
-	 position:relative;
-	 top:25px;
  }
  .github{
-	 left:150px;
+	 right:220px;
  }
  .github:hover{
 	fill:#006496;
@@ -289,18 +259,64 @@ button{
 	 fill:#C40000;
 	 cursor:pointer;
  }
- #footer .contact::before {
-	content:"Contact";
-	display:block;
-	margin-bottom:5px;
+ 
+ footer{
+	 height:150px;
+	 width:100%;
+	 background-color:black;
+	 color:white;
+	 font-family:arial;
  }
  
+ footer .contact-information{
+	 float:left;
+	 width:31%;
+	 height:150px;
+	 margin-left:9px;
+	 word-wrap:break-word;
+	 border-right:1px solid #363636;
+ }
+ 
+ footer .jump-to{
+	 float:left;
+	 width:31%;
+	 height:150px;
+	 border-right:1px solid #363636;
+ }
+ footer .jump-to ul{
+	 margin:0;
+	 padding:0;
+	 text-align:center;
+ }
+ footer .media{
+	 float:left;
+	 width:31%;
+	 height:150px;
+ }
+ footer p{
+	 text-align:center;
+	 margin-bottom:45px;
+ }
+ footer ul{
+	 list-style-type:none;
+	 text-align:center;
+ }
+ footer .medias ul li{
+	 display:inline;
+ }
+ footer .footer-list-wrap{
+	 width:300px;
+	 margin:0 auto;
+ }
+ footer .footer-list-wrap ul{
+	 text-align:left;
+ }
+ footer .jump-to .footer-list-wrap{
+	 width:150px;
+ }
  /*Ultra large screens*/
  
  @media (min-width:1500px){
-	 #footer{
-		 width:1900px;
-	 }
  }
  
 /* Large desktops and laptops */
@@ -309,96 +325,55 @@ button{
 
 /* Landscape tablets and medium desktops */
 @media (min-width: 992px) and (max-width: 1199px) {
-	.mask{
-		background-color:blue;
-	}
-	.main_steam{
-		width:320px;
-	}
-	.main_portfolio{
-		width:320px;
-		height:350px;
-	}
-	.main_project{
-		width:320px;
-	}
 }
 
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px) {
- /*Footer*/
-  #image-intro span{
-	  left:40%;
-  }
- #skills{
-	 height:100%;
- }
- .container{
-	 margin-bottom:450px;
- }
- #footer{
-	 font-size:0.965em;
-	 text-align:center;
-	 height:200px;
- }
- #footer ul{
-	 position:relative;
-	 right:15px;
- }
- .container{
-	 flex-direction:column;
-	 height:365px;
- }
- .filler{
-	 margin:0 auto;
-	 margin-bottom:25px;
-	 position:relative;
-	 top:250px;
- }
- .mask{
-	 background-color:pink;
- }
 }
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
-	#skills{
-		height:100%;
+	footer .contact-information{
+		float:none;
+		width:100%;
+		background-color:black;
+		border-bottom:1px solid #363636;
 	}
- #image-intro span{
-	 left:39%;
- }
-	 /*Skills section*/
- .col-md-4{
-	 width:100%;
- }
- #view{
-	 left:325px;
- }
- #footer{
-	 height:190px;
- }
- .square{
-	 width:100vw;
- }
- .info{
-	 left:50px;
- }
- .view{
-	 left:65vw;
- }
- svg{
-	 top:0;
- }
- .mask{
-	 background-color:yellow;
- }
+	footer .jump-to{
+		margin:0;
+		padding:0;
+		float:none;
+		width:100%;
+		background-color:black;
+		border-bottom:1px solid #363636;
+	}
+	footer .jump-to ul li{
+		font-size:1.3em;
+		margin-bottom:5px;
+	}
+	footer .medias{
+		margin:0;
+		padding:0;
+		float:none;
+		width:100%;
+		background-color:black;
+	}
+	footer .medias ul{
+		margin:0;
+		padding:0;
+		text-align:center;
+	}
+	footer p{
+		margin-bottom:30px;
+	}
  .text{
-	 position:relative;
-	 left:0;
-	 bottom:0;
-	 width:97vw;
-	 height:0;
+	width:600px;
+	height:25px;
+	background-color:red;
+	top:325px;
+	left:0;
+	bottom:0;
+	right:0;
  }
 }
 
@@ -406,9 +381,7 @@ button{
 
 /* Portrait phones and smaller */
 @media (max-width: 480px) {
- #image-intro span{
-	 left:10%;
- }
+	
  #navigation{
 	 height:100px;
  }
@@ -424,34 +397,13 @@ button{
 	 top:0;
  }
  /*Big-image & it's button*/
- #image-intro{
+ header{
 	 height:1185px;
  }
- span{
+ #button-main{
 	 left:25%;
  }
  /*Skills section*/
- /*Footer*/
- #footer{
-	 position:relative;
-	 font-size:0.965em;
-	 text-align:center;
-	 height:230px;
- }
- .info{
-	 left:1vw;
- }
- .view{
-	 left:65vw;
- }
- .text{
-	 height:0;
-	 bottom:0;
- }
- #footer ul{
-	 position:relative;
-	 right:15px;
- }
  .main_steam{
 	 width:100%;
  }
@@ -461,12 +413,6 @@ button{
 }
 
 @media (max-width: 420px){
-	 #image-intro span{
-		 left:25%;
-	 }
-	#footer{
-		position:relative;
-	}
 	.mask{
 		background-color:black;
  }
