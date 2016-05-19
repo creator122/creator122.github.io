@@ -62,12 +62,13 @@ $(function(){
 			}
 			//If it is already on, decrease it's height.
 			else{
-				$(parent).animate({marginBottom: 0},1500,function(){
+				$(element).animate({marginBottom: 0},1500,function(){
 					console.log("Margin set");
 				});
 				$(text).animate({height: 0},1500,function(){
 					$(text).css("display","none");
 					console.log("Finished");
+                                        $(element).attr("status","off");
 				});
 			}
 		}
