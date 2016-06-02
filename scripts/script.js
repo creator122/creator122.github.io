@@ -20,14 +20,14 @@ $(function(){
 		for better readibility of the text and aesthetic factor*/
 		
 		if ($(window).width()>750){
-			
-			if ($(element).attr("status") == "off"){
+			console.log(element);
+			if ($(element).attr("data-status") === "off"){
 				$(element).animate({
 					right: offset
 				}, 1500, function(target) {
 					$(text).css("display","block");
 					$(text).animate({width: "+="+widthBlock}, 1500, function(){
-						$(element).attr("status","on");
+						$(element).attr("data-status","on");
 					});
 				});
 			}
@@ -38,8 +38,9 @@ $(function(){
 					$(element).animate({
 						right: -offset
 					}, 1500, function(target) {
-						$(text).animate({width: "+="+widthBlock}, 1500, function(){
-							$(element).attr("status","off");
+                                                $(text).css("display","none");
+						$(text).animate({width: "-="+widthBlock}, 1500, function(){
+							$(element).attr("data-status","off");
 						});
 					});
 				});
@@ -50,12 +51,12 @@ $(function(){
 		/* If the window width is less than the value specified, target the height of a text element */
 		else{
 			//If button is off, increase it's height
-			if($(element).attr("status") == "off"){
+			if($(element).attr("data-status") == "off"){
 				$(element).animate({marginBottom: 250},1000,function(){
 					$(text).css("display","block");
 					
 					$(text).animate({height: 245},1200,function(){
-						$(element).attr("status","on");
+						$(element).attr("data-status","on");
 						console.log("Finished");
 					});
 				});
@@ -68,7 +69,7 @@ $(function(){
 				$(text).animate({height: 0},1500,function(){
 					$(text).css("display","none");
 					console.log("Finished");
-                                        $(element).attr("status","off");
+                                        $(element).attr("data-status","off");
 				});
 			}
 		}
