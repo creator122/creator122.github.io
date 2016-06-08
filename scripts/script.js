@@ -1,12 +1,10 @@
 $(function(){
-	
+	$(document).scrollTop(0);
 	var toggled = false;
-	
 	var elementWidth = $(".square").width();
 	var widthBlock = $(window).width()-elementWidth;
 	
 	//Check the window height and determine the width of div.
-
 	$(".info").click(function(e){
 		var parent = $(this).parent();
 		var element = $(parent).parent();
