@@ -9,6 +9,7 @@ html,body
     height: 100%;
     margin: 0px;
     padding: 0px;
+    padding-bottom:70px;
 }
 a,a:hover{
 	text-decoration:none;
@@ -16,7 +17,7 @@ a,a:hover{
 	color:white;
 }
 section{
-	min-height: 100%;
+	min-height: 33.33%;
 	width:100%;
 	background-color:white;
 }
@@ -101,6 +102,7 @@ header{
   -o-background-size: cover;
   background-size: cover;
   background-attachment:scroll;
+  margin-bottom:70px;
  }
  header a{
 	 font-family:Arial;
@@ -135,6 +137,16 @@ header{
  .samples{
 	 text-align:center;
 	 font-size:2.5em;
+ }
+ .bootstrap-footer{
+     background-color:black;
+     overflow:hidden;
+     margin:0;
+     padding:0;
+     bottom:0;
+     top:0;
+     left:0;
+     right:0;
  }
  .samples:after{
 	 content:"";
@@ -200,19 +212,6 @@ header{
      height:35px;
      border-radius:5px;
  }
- .mask{
-	 position:absolute;
-	 height:325px;
-	 width:600px;
-	 z-index:99;
-	 background-color:#0FD443;
-	 opacity:0;
-	 transition:0.5s;
- }
- .mask:hover{
-	 opacity:0.2;
-	 cursor:pointer;
- }
  header button{
 	 position:absolute;
 	 top:300px;
@@ -277,14 +276,6 @@ header{
 	 cursor:pointer;
  }
  
- footer{
-	 height:150px;
-	 width:100%;
-	 background-color:black;
-	 color:white;
-	 font-family:arial;
- }
- 
  footer .contact-information{
          padding-top:10px;
 	 float:left;
@@ -297,29 +288,12 @@ header{
  footer .contact-information .footer-wrapper {width:250px;margin:0 auto;}
  footer .contact-information .footer-wrapper ul{width:225px;margin-left:25px;}
  
- footer .jump-to{
-         padding-top:10px;
-	 float:left;
-	 width:31%;
-	 height:150px;
-	 border-right:1px solid #363636;
- }
- footer .jump-to ul{
-	 margin:0;
-	 padding:0;
+ footer .footer-column{text-align:center;color:white;margin-bottom:40px;margin-top:15px;}
+ footer .footer-column:last-child{margin-bottom:0;}
+ footer .text-muted{
 	 text-align:center;
- }
- footer .media{
-	 float:left;
-	 width:31%;
-	 height:150px;
- }
- footer .medias{
-     padding-top:10px;
- }
- footer p{
-	 text-align:center;
-	 margin-bottom:45px;
+	 margin-bottom:30px;
+         color:#919191;
  }
  footer ul{
 	 list-style-type:none;
@@ -327,16 +301,6 @@ header{
  }
  footer .medias ul li{
 	 display:inline;
- }
- footer .footer-list-wrap{
-	 width:300px;
-	 margin:0 auto;
- }
- footer .footer-list-wrap ul{
-	 text-align:left;
- }
- footer .jump-to .footer-list-wrap{
-	 width:150px;
  }
  /*Ultra large screens*/
  
@@ -353,47 +317,16 @@ header{
 
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px) {
+    .bootstrap-footer{
+        min-height:50%;
+    }
 }
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
-	footer .contact-information{
-		float:none;
-                width:98%;
-                border-right:0;
-		background-color:black;
-		border-bottom:1px solid #363636;
-	}
-        footer .footer-wrapper *{margin:0;padding:0;}
-        footer  .footer-wrapper{width:250px;text-align:center;margin:0 auto;}
-        footer  .footer-wrapper p{margin-bottom:12px;}
-        footer  .footer-wrapper ul{width:225px;margin:0 auto;}
-        footer .contact-information  .footer-wrapper ul{width:225px;margin:0 auto;text-align:left;}
-	footer .jump-to{
-		margin:0;
-		float:none;
-		width:100%;
-		background-color:black;
-		border-bottom:1px solid #363636;
-                
-	}
-	footer .jump-to ul li{
-		font-size:1.3em;
-	}
-	footer .medias{
-		margin:0;
-		float:none;
-		width:100%;
-		background-color:black;
-	}
-	footer .medias ul{
-		margin:0;
-		padding:0;
-		text-align:center;
-	}
-	footer p{
-		margin-bottom:22.5px;
-	}
+    .bootstrap-footer{
+        min-height:50%;
+    }
  .text{
 	width:600px;
 	height:25px;
