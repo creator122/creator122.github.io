@@ -14,20 +14,18 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link rel="stylesheet" href="newstyle.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<script src="scripts/svg-injector.js"></script>
 <script src="scripts/script.js"></script>
-
 </head>
 
 <body>
 <!-- Navigation, got to clean it up. -->
 <header>
 	<nav id="navigation">
-		<ul>
+		<ul style>
 			<li><a href="#samples">Samples</a></li>
 		</ul>
 	</nav>
-  <h1>I'm Lukas, a Back-end WebDeveloper currently residing in Poland.</h1>
+  <h1 style="margin:0;padding:0;">I'm Lukas, a Back-end WebDeveloper currently residing in Poland.</h1>
   <div class="container">
     <a href="#samples" id="button-main">View my works</a>
   </div>
@@ -42,8 +40,8 @@
 		
 		<!-- First layer,mainly buttons buttons -->
 		<div class="square steam">
-			<div class="info steam">Info</div>
-			<a href="#" class="steam view">View</a>
+			<div class="info">Info</div>
+                        <div class="view">View</div>
 		</div>
 		
 		<!-- The content of slide-out div -->
@@ -59,8 +57,8 @@
 	
 	<div class="sample portfolio" data-status="off">
 		<div class="square portfolio">
-			<div class="info portfolio">Info</div>
-			<a href="#" class="portfolio view">View</a>
+			<div class="info">Info</div>
+                        <div class="view">View</div>
 		</div>
 		
 		<div class="text portfolio">
@@ -75,20 +73,24 @@
 <!-- Footer, we inject SVG in here -->
 <footer>
 	<div class="contact-information">
-		<p>Contact me</p>
-		<div class="footer-list-wrap">
-			<ul>
-				<li>E-mail: alfverified@gmail.com</li>
-				<li>Phone number: (+48)791-279-085</li>
-			</ul>
-		</div>
+                <div class="footer-wrapper">
+                    <p>Contact me</p>
+                    <div class="footer-list-wrap">
+                            <ul>
+                                    <li>E-mail: alfverified@gmail.com</li>
+                                    <li>Phone number: (+48)791-279-085</li>
+                            </ul>
+                    </div>
+                </div>
 	</div>
 	<div class="jump-to">
-		<p>Return to previous sections</p>
-			<ul>
-				<li><a href="#navigation">Navigation</a></li>
-				<li><a href="#samples">Examples</a></li>
-			</ul>
+                <div class="footer-wrapper">
+                    <p>Return to previous sections</p>
+                    <ul>
+			<li><a href="#navigation">Navigation</a></li>
+			<li><a href="#samples">Examples</a></li>
+                    </ul>
+                </div>
 	</div>
 	<div class="medias">
 		<p>Find me on medias</p>
@@ -97,13 +99,5 @@
 		</ul>
 	</div>
 </footer>
-
-<script>
-  // Elements to inject
-  var mySVGsToInject = document.querySelectorAll('img.insert-me');
-
-  // Do the injection
-  SVGInjector(mySVGsToInject);
-</script>
 </body>
 </html>
